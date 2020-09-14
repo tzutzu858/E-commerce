@@ -1,5 +1,6 @@
 # E-commerce
 電商購物網站<br />
+https://tzutzu858.github.io/E-commerce/<br />
 <br />
 草圖 :<br />
 <img src="https://github.com/tzutzu858/E-commerce/blob/master/diagram/index.jpg?raw=true" width="300" >
