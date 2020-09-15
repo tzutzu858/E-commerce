@@ -13,4 +13,31 @@ order page <br />
 ## 20200915 輪播效果
 
 <img src="https://github.com/tzutzu858/E-commerce/blob/master/diagram/swiper.gif?raw=true" width="500" ><br /><br />
-*************************
+js 控制<br />
+```js
+var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    speed:1500,
+    autoplay: {
+       delay: 2000,
+    },
+    effect:'cube',
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      // el: '.swiper-scrollbar',
+    },
+  })
+  ```
