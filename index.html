@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Dream Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -33,8 +35,26 @@
         <div class="hot_sell_title">熱銷搶購中</div>
     </section>
     <section class="test1">
-        <div class="test2">
-            <h2>滑動頁面</h2>
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="img/cat-2083492_640.jpg" ></div>
+                <div class="swiper-slide"><img src="img/cat-2083492_640.jpg" ></div>
+                <div class="swiper-slide"><img src="img/cat-2083492_640.jpg" ></div>    
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+        
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+        
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+            <script src="js/all.js" type="text/javascript" charset="utf-8"></script>
         </div>
     </section>
     <section class="section">
@@ -158,6 +178,7 @@
         </div>
     </footer>
     <script src="index.js"></script>
+    <script src="js/all.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
