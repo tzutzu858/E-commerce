@@ -13,9 +13,24 @@ order page <br />
 ## 20200915 輪播效果
 
 <img src="https://github.com/tzutzu858/E-commerce/blob/master/diagram/swiper.gif?raw=true" width="500" ><br /><br />
-### JavaScript 控制
-<br />
 
+
+html
+```html
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+ 
+<div class="swiper-container">
+<div class="swiper-wrapper">               
+   <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>
+   <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>
+   <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>    
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+```
+
+
+js
 ```js
 var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
