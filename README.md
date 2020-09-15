@@ -13,7 +13,9 @@ order page <br />
 ## 20200915 輪播效果
 
 <img src="https://github.com/tzutzu858/E-commerce/blob/master/diagram/swiper.gif?raw=true" width="500" ><br /><br />
-js 控制<br />
+### JavaScript 控制
+<br />
+
 ```js
 var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
