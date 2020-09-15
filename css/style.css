@@ -10,7 +10,7 @@ html {
 .banner {
     height       : 490px;
     margin-bottom: 40px;
-    background   : url(img/navbar_bg.png) center/cover no-repeat;
+    background   : url(../img/navbar_bg.png) center/cover no-repeat;
 }
 
 .banner h2 {
