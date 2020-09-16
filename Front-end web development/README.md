@@ -5,7 +5,7 @@ https://tzutzu858.github.io/E-commerce/<br />
 [swiper](https://github.com/tzutzu858/E-commerce/blob/master/README.md#20200915-%E8%BC%AA%E6%92%AD%E6%95%88%E6%9E%9C)
 ## design sketch :<br />
 index page<br />
-<img src="https://github.com/tzutzu858/E-commerce/blob/master/diagram/index.jpg?raw=true" width="300" ><br /><br />
+<img src="https://github.com/tzutzu858/E-commerce/blob/master/Front-end%20web%20development/diagram/index.jpg?raw=true" width="300" ><br /><br />
 register page<br />
 <img src="https://github.com/tzutzu858/E-commerce/blob/master/diagram/sign_up%E9%A0%81%E9%9D%A2.jpg?raw=true" width="300" ><br /><br />
 order page <br />
