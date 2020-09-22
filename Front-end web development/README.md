@@ -2,7 +2,7 @@
 
 https://tzutzu858.github.io/E-commerce/Front-end%20web%20development/<br />
 <br />
-[swiper](https://github.com/tzutzu858/E-commerce/blob/master/README.md#20200915-%E8%BC%AA%E6%92%AD%E6%95%88%E6%9E%9C)
+[swiper](https://github.com/tzutzu858/E-commerce/blob/master/Front-end%20web%20development/README.md#20200915-%E8%BC%AA%E6%92%AD%E6%95%88%E6%9E%9C)
 ## design sketch :<br />
 index page<br />
 <img src="https://github.com/tzutzu858/E-commerce/blob/master/Front-end%20web%20development/diagram/index.jpg?raw=true" width="300" ><br /><br />
