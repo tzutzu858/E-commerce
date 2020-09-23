@@ -38,7 +38,7 @@ class CustomerDaoImpJdbcTest {
     @Test
     void create() {
         Customer customer = new Customer();
-        customer.setId("google");
+        customer.setId("try1");
         customer.setName("谷歌");
         customer.setPassword("google");
         customer.setPhone("09123456789");
