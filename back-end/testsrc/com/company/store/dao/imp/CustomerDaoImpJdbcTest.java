@@ -38,19 +38,19 @@ class CustomerDaoImpJdbcTest {
     @Test
     void create() {
         Customer customer = new Customer();
-        customer.setId("Mayday");
-        customer.setName("五月天");
-        customer.setPassword("maydaymayday");
-        customer.setPhone("0987654321");
+        customer.setId("google");
+        customer.setName("谷歌");
+        customer.setPassword("google");
+        customer.setPhone("09123456789");
         customer.setBirthday(new Date(1111111111));
 
         dao.create(customer);
 
-        Customer customer1 = dao.findByPk("Mayday");
-        assertEquals("Mayday",customer1.getId());
-        assertEquals("五月天",customer1.getName());
-        assertEquals("maydaymayday",customer1.getPassword());
-        assertEquals("0987654321",customer1.getPhone());
+        Customer customer1 = dao.findByPk("google");
+        assertEquals("google",customer1.getId());
+        assertEquals("谷歌",customer1.getName());
+        assertEquals("google",customer1.getPassword());
+        assertEquals("09123456789",customer1.getPhone());
         assertEquals(1111111111,customer1.getBirthday().getTime());
     }
 
