@@ -38,21 +38,22 @@ class OrdersServiceImpTest {
 
     @Test
     void submitOrders() {
+        //購物車
         List<Map<String, Object>> cart = new ArrayList<Map<String, Object>>();
-
+        //放入商品1
         Map<String, Object> item1 = new HashMap<String, Object>();
         item1.put("goodsid", 3L);
         item1.put("quantity", 2);
         cart.add(item1);
-
+        //放入商品2
         Map<String, Object> item2 = new HashMap<String, Object>();
         item2.put("goodsid", 8L);
         item2.put("quantity", 3);
         cart.add(item2);
-
+        //提交訂單並回傳ordersid
         String ordersid = ordersService.submitOrders(cart);
         assertNotNull(ordersid);
-
+        //斷言是否有這筆訂單
         Orders orders = orderDao.findByPk(ordersid);
         assertNotNull(orders);
         assertEquals(1, orders.getStatus());
@@ -63,6 +64,7 @@ class OrdersServiceImpTest {
 
         List<OrderLineItem> list = orderLineItemDao.findAll();
         List<OrderLineItem> orderLineItemList = new ArrayList<OrderLineItem>();
+        //找出ordersid 這張訂單的所有orderLineItem 並放入orderLineItemList
         for (OrderLineItem lineItem : list) {
             if (lineItem.getOrders().getId().equals(ordersid)) {
                 orderLineItemList.add(lineItem);
