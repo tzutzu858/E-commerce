@@ -1,13 +1,63 @@
 html {
     font-family: 微軟正黑體;
 }
-
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+}
+*{
+	box-sizing: border-box;
+}
+textarea {
+  resize : none;
+}
 /* Swiper */
 .swiper-container {
-    width : 640px;
+    width: 640px;
     height: 390px;
 }
-
 /* index */
 .banner {
     height       : 490px;
@@ -263,8 +313,6 @@ footer {
         font-size      : 16px;
     }
 
-
-
     .section_title {
         font-size    : 30px;
         border-left  : solid 15px #a3dea2;
@@ -301,7 +349,6 @@ footer {
     }
 }
 
-
 @media(max-width: 375px) {
 
     .navbar_list li a {
@@ -309,7 +356,88 @@ footer {
     }
 
 }
-
-
-
-
+/* register */
+.register-banner {
+	padding: 1px;
+    background   : url(../img/navbar_bg.png) center/cover no-repeat;
+}
+.register-footer{
+	margin-top: 0px;
+}
+.register-section{
+	margin: 80px auto;
+	margin-bottom: 0px3;
+	padding: 50px 10px 40px 100px;
+	width: 800px;
+	height: 700px;
+	background: url(../img/signBg.png) no-repeat;
+	display: flex;
+	flex-direction: ;
+}
+.register-section .switch{
+	margin-left: 100px;
+}
+.register-section span{
+	color: rgba(143,140,140,0.8);
+	margin-right: 10px;
+}
+.register-section .switch a{
+	display: inline-block;
+	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 15px;
+	font-weight: 900;
+	box-shadow: 6px 6px 12px grey;
+}
+.register-section .switch .signIn-botton{
+	background: #999674;
+	color: #FFFFFF;
+	border-radius: 10px 0px 0px 10px;
+}
+.register-section .switch .signIn-botton:hover{
+	background:  rgba(152,150,116,0.6);
+	box-shadow: none;
+}
+.register-section .switch .sigUp-botton{
+	background: #FFFFFF;
+	color: #000000;
+	border-radius: 0px 10px 10px 0px;
+}
+.register-section .switch .sigUp-botton:hover{
+	background: rgba(255,255,255,0.3);
+	color: #000000;
+	box-shadow: none;
+}
+.register-section form{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	color: #936600;
+}
+.register-section input{
+	width: 280px;
+	margin-top: 10px;
+	margin-bottom: 40px;
+	border: none;
+	background: transparent;
+	border-bottom: #936600 1px solid;
+}
+.register-section form input:focus{
+	outline: none;
+}
+.register-section .submit-button{
+	width: 100px;
+	border: none;
+	border-radius: 7px;
+	margin-top: 0px;
+	margin-left: 80px;
+	padding: 10px 0px;
+	background: rgba(147,102,0,0.8);
+	color: #FFFFFF;
+}
+.register-section .submit-button:hover{
+	color: rgba(147,102,0,0.8);
+	background: #FFFFFF;
+	cursor: pointer;  
+}

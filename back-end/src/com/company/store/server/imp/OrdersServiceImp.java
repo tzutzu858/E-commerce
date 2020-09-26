@@ -27,7 +27,7 @@ public class OrdersServiceImp implements OrdersService {
         Orders orders = new Orders();
         Date date = new Date();
         //訂單編號＝目前時間標記+亂數（避免重複）
-        //大型電商有很多用戶 ，同時下訂單只用時間標記做訂單編號很容易重複
+        //大型電商有很多會員 ，同時下訂單只用時間標記做訂單編號很容易重複
         String ordersid = String.valueOf(date.getTime()) + String.valueOf((int) (Math.random() * 100));
 
         orders.setId(ordersid);
@@ -44,9 +44,9 @@ public class OrdersServiceImp implements OrdersService {
             //item結構[商品id , 數量]
 
             //取得key為"goodsid"的value 並轉換為 long
-            Long goodsid = (Long)(item.get("goodsid"));
+            Long goodsid = (Long) (item.get("goodsid"));
             //取得key為"quantity"的value 並轉換為Integer
-            Integer quantity = (Integer)(item.get("quantity"));
+            Integer quantity = (Integer) (item.get("quantity"));
             //用goodsid 取得good
             Goods goods = goodsDao.findByPk(goodsid);
             //小計
