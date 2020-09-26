@@ -1,11 +1,13 @@
 html {
     font-family: 微軟正黑體;
 }
+
 /* Swiper */
 .swiper-container {
-    width: 640px;
+    width : 640px;
     height: 390px;
 }
+
 /* index */
 .banner {
     height       : 490px;
@@ -307,3 +309,7 @@ footer {
     }
 
 }
+
+
+
+
