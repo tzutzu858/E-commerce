@@ -52,14 +52,14 @@ formRegister.addEventListener('submit',
 function checkInputIsOk(form) {
     const formBlockInput = form.querySelectorAll('.form_block_input');
     console.log(formBlockInput);
-    var hasCheck = false;
+    var hasCheck = true;
     for (const inputName of formBlockInput) {
         const errP = inputName.querySelector('p');
         const inputValue = inputName.querySelector('input');
         console.log(inputValue.value);
         if (inputValue.value) {
             errP.className = 'input-ok';
-            hasCheck = true;
+            
         } else {
             errP.className = 'input-err';
             hasCheck = false;
