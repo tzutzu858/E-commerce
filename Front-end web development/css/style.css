@@ -546,12 +546,28 @@ footer {
 }
 
 .form_block_input {
-    width        : 280px;
-    margin-top   : 10px;
-    margin-bottom: 40px;
-    border       : none;
-    background   : transparent;
-    border-bottom: #936600 1px solid;
+    display       : flex;
+    flex-direction: row;
+}
+
+.input_block {
+    width         : 230px;
+    margin-top    : 10px;
+    margin-bottom : 40px;
+    border        : none;
+    background    : transparent;
+    border-bottom : #936600 1px solid;
+}
+
+.input-ok {
+    visibility: hidden;
+    margin    : 5px;
+}
+
+.input-err {
+    color     : #e74149;
+    visibility: visible;
+    margin    : 5px; 
 }
 
 .form_block form input:focus {
@@ -581,9 +597,9 @@ footer {
 }
 
 .register-section {
-    display:none
+    display: none;
 }
 
 .signIn-session {
-    display:none
+    display: none;
 }
