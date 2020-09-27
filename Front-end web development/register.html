@@ -10,22 +10,21 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Dream Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width,initial-scle=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
 
 </head>
 
 <body>
-    <section class="register-banner">
+    <div class="register-banner">
         <nav class='navbar'>
-            <div class="wrapper">
                 <img class="site-name" src="svg/title_logo.svg" />
                 <div class='navbar_list'>
-                    <div class="navbar_item"><a href="#"><img class='cart icon' src="svg/smartcart.svg"/>結帳</a></div>
-                    <div class="navbar_item"><a href="#"><img class='nav_icon' src="svg/question.svg"/>FAQ</a></div>
-                    <div class="navbar_login navbar_register"><a href="#">註冊</a></div>
-                    <div class="navbar_login"><a href="#">登入</a></div>
-                </div>
+                    <div class="navbar_item"><a href="#"><i class="cart icon"></i>購物車</a></div>
+                    <div class="navbar_item"><a href="#"><i class="question circle icon"></i>FAQ</a></div>
             </div>
         </nav>
+		<!-- 登入表單 -->
 		<div class="register-section">
 				<form action="" method="post">
 					帳號：
@@ -48,7 +47,7 @@
 					<a href="" class="signIn-botton">sign in</a><a href="" class="sigUp-botton">sign up</a>
 				</div>
 			</div>
-    </section>
+    </div>
     <footer class="register-footer">
         <div class="footer_top">
             <div class="wrapper">
@@ -72,8 +71,10 @@
             happy coding © 2020 I Love Java.有限公司版權所有
         </div>
     </footer>
-    <script src="index.js"></script>
+	<script src="index.js"></script>
     <script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>	
+	<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 </body>
 
 </html>
