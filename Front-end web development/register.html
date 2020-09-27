@@ -19,35 +19,55 @@
             <div class="wrapper">
                 <img class="site-name" src="svg/title_logo.svg" />
                 <div class='navbar_list'>
-                    <div class="navbar_item"><a href="#"><img class='cart icon' src="svg/smartcart.svg"/>結帳</a></div>
-                    <div class="navbar_item"><a href="#"><img class='nav_icon' src="svg/question.svg"/>FAQ</a></div>
+                    <div class="navbar_item"><a href="#"><img class='nav_icon' src="svg/smartcart.svg" />結帳</a></div>
+                    <div class="navbar_item"><a href="#"><img class='nav_icon' src="svg/question.svg" />FAQ</a></div>
                     <div class="navbar_login navbar_register"><a href="#">註冊</a></div>
                     <div class="navbar_login"><a href="#">登入</a></div>
                 </div>
             </div>
         </nav>
-		<div class="register-section">
-				<form action="" method="post">
-					帳號：
-					<input type="text" name="id" id="" value="" />
-					姓名：
-					<input type="text" name="name" id="" value="" />
-					密碼：
-					<input type="text" name="password" id="" value="" />
-					再輸入一次：
-					<input type="text" name="password" id="" value="" />
-					生日：
-					<input type="text" name="birthday" id="" value="" />
-					電話：
-					<input type="text" name="phone" id="" value="" />
-					
-					<input type="submit" class="submit-button" name="" value="sign up" />
-				</form>
-				<div class="switch">
-					<span>已有帳號了嗎</span>
-					<a href="" class="signIn-botton">sign in</a><a href="" class="sigUp-botton">sign up</a>
-				</div>
-			</div>
+        <div id=register class="form_block register-section">
+            <form action="" method="post">
+                帳號：
+                <input type="text" class="form_block_input"  name="id" id="" value="" />
+                姓名：
+                <input type="text" class="form_block_input"  name="name" id="" value="" />
+                密碼：
+                <input type="text" class="form_block_input"  name="password" id="" value="" />
+                再輸入一次：
+                <input type="text" class="form_block_input"  name="password" id="" value="" />
+                生日：
+                <input type="text" class="form_block_input"  name="birthday" id="" value="" />
+                電話：
+                <input type="text" class="form_block_input"  name="phone" id="" value="" />
+
+                <input type="submit" class="submit-button" name="" value="sign up" />
+            </form>
+            <div class="switch">
+                <span class="has_account">已有帳號了嗎</span>
+                <input type=button class="btn signIn-button" value="sign in">
+                <input type=button class="btn sigUp-button" value="sign up">
+            </div>
+        </div>
+
+        <div id=signIn class="form_block  signIn-session">
+            <form action="" method="post">
+
+                <img class='img_moon' src="img/moon.png" />
+                帳號：
+                <input type="text" class="form_block_input"  name="id" id="" value="" />
+
+                密碼：
+                <input type="text" class="form_block_input"  name="password" id="" value="" />
+
+                <input type="submit" class="submit-button" name="" value="Sign in" />
+            </form>
+            <div class="switch">
+                <span class="has_account">還沒有帳號嗎</span>
+                <input type=button class="btn signIn-button" value="sign in">
+                <input type=button class="btn sigUp-button" value="sign up">
+            </div>
+        </div>
     </section>
     <footer class="register-footer">
         <div class="footer_top">
@@ -72,8 +92,8 @@
             happy coding © 2020 I Love Java.有限公司版權所有
         </div>
     </footer>
-    <script src="index.js"></script>
-    <script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sign_in_up.js" type="text/javascript" charset="utf-8"></script>
+   
 </body>
 
 </html>
