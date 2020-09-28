@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<div class="wraper">
-			<div class="header">
+			<div class="header member-header">
 				<div class="nav-bar">
 					<h1><a href="googlist.html">Dream</a></h1>
 					<ul class="menu">
@@ -27,12 +27,37 @@
 					</ul>
 				</div>
 				<div class="banner">
-					<h2>BUY A DREAM</h2>
-					<p>A dedached space for the soul to settle in the hustle and bustle of the confused city.</p>
+					<div class="member-section ">
+							<form class="member-form register-form" action="" method="post">
+								帳號：
+								<input type="text" name="id" id="" value="" />
+								姓名：
+								<input type="text" name="name" id="" value="" />
+								密碼：
+								<input type="text" name="password" id="" value="" />
+								再輸入一次：
+								<input type="text" name="password" id="" value="" />
+								生日：
+								<input type="text" name="birthday" id="" value="" />
+								電話：
+								<input type="text" name="phone" id="" value="" />
+								
+								<input type="submit" class="submit-button" name="" value="sign up" />
+							</form>
+							<form class="member-form signIn-form" action="" method="post">
+								<img src="img/moon.png" >
+								帳號：
+								<input type="text" name="id" />
+								密碼：
+								<input type="text" name="password">
+								<input type="submit" class="submit-button" name="" value="sign in" />
+							</form>
+							<div class="sign-switch">
+								<span>已有帳號了嗎</span>
+								<a href="" class="signIn-switch">sign in</a><a href="" class="sigUp-switch">sign up</a>
+							</div>
+						</div>
 				</div>
-			</div>
-			<div class="context">
-				這是會員專區
 			</div>
 			<div class="footer">
 				<div class="footer_info">
@@ -54,7 +79,7 @@
             happy coding © 2020 I Love Java.有限公司版權所有
 			</div>
 		</div>
-		
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>	
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 	</body>

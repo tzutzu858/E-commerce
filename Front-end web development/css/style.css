@@ -584,18 +584,10 @@ footer {
     background   : rgba(147, 102, 0, 0.8);
     color        : #FFFFFF;
 }
-
-.form_block .submit-button:hover {
-    color     : rgba(147, 102, 0, 0.8);
-    background: #FFFFFF;
-    cursor    : pointer;
-}
-
 .submit-button:active {
     box-shadow: 0 5px #666;
     transform : translateY(4px);
 }
-
 .register-section {
     display: none;
 }

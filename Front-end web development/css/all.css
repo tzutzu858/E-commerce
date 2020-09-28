@@ -1,8 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+html {
+    font-family: 微軟正黑體;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -51,8 +49,7 @@ table {
 	margin: 0 auto;
 }
 .header{
-	
-	background: #FBF9FA;
+	background: url(../img/navbar_bg.png)  center/cover no-repeat;
 }
 .header .nav-bar{
 	padding: 20px;
@@ -93,15 +90,16 @@ table {
 }
 .banner{
 	margin-top: 5px;
-	height: 490px;
-    background: url(../img/navbar_bg.png) center/cover no-repeat;
+	height: 100%;
 	padding: 50px ;
 }
 .banner h2{
+	font-size: 28px;
 	color: #746059;
 	font-weight: 900;
 }
 .banner p{
+	font-size: 20px;
 	margin: 20px;
 	width: 400px;
 	color: #746059;
@@ -140,4 +138,106 @@ table {
     color     : white;
     font-size : 14px;
     padding   : 12px;
+}
+/* member--community */
+.member-header{
+	background: url(../img/navbar_bg.png)  center/cover no-repeat;
+	height: 1000px;
+}
+.member-section{
+	margin: 0 auto;
+    width: 800px;
+	padding: 50px;
+	height: 700px;
+    background: url(../img/signBg.png) center/cover no-repeat;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.member-form{
+	color: rgba(147, 102, 0, 0.8);
+}
+.member-form input{
+	width: 250px;
+	margin:10px 0px 30px 0px ;
+	align-items: center;
+	border       : none;
+	border-bottom:1px solid rgba(147, 102, 0, 0.8) ;
+	background: transparent;
+	color: rgba(147, 102, 0, 0.8);
+}
+.member-form input:focus{
+	outline: none;
+}
+.member-form .submit-button{
+	width: 120px;
+	margin: 10px 20px 10px 60px;
+	padding      : 10px 0px;
+	border-radius: 7px;
+	background   : rgba(147, 102, 0, 0.8);
+	color        : #FFFFFF;
+}
+.member-form .submit-button:active{
+	box-shadow: 0 5px #666;
+	transform : translateY(4px);
+}
+.member-form .submit-button:hover{
+	border: none;
+	cursor    : pointer;
+	transform: scale(1.07);
+}
+.register-form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	padding: 20px;
+	display: none;
+}
+/* member-signIn */
+.signIn-form{
+	display: flex;
+	flex-direction: column;
+	margin: 0px 0px 0px 50px;
+	padding: 20px;
+}
+.signIn-form img{
+	margin-top: 20px;
+	width        : 280px;
+	margin-bottom: 110px;
+}
+/* member-switch */
+.sign-switch span{
+	color  : rgba(143, 140, 140, 0.8);
+}
+.sign-switch a{
+	display        : inline-block;
+	text-decoration: none;
+	height         : 30px;
+	line-height    : 30px;
+	padding        : 0 15px;
+	font-weight    : 900;
+	box-shadow     : 6px 6px 12px grey;
+	border         : none;
+	outline        : none;
+}
+.sign-switch .signIn-switch{
+	background   : #999674;
+	color        : #FFFFFF;
+	border-radius: 10px 0px 0px 10px;
+}
+.sign-switch .signIn-switch:hover{
+	background: rgba(152, 150, 116, 0.6);
+	box-shadow: none;
+	border    : none;
+}
+.sign-switch .sigUp-switch{
+	background   : #FFFFFF;
+	color        : #000000;
+	border-radius: 0px 10px 10px 0px;
+}
+.sign-switch .sigUp-switch:hover{
+	background: rgba(255, 255, 255, 0.3);
+	color     : #000000;
+	box-shadow: none;
+	border    : none;
 }
