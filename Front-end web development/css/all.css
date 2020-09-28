@@ -156,6 +156,13 @@ table {
 }
 .member-form{
 	color: rgba(147, 102, 0, 0.8);
+	width: 300px;
+	width: 300px;
+	margin-top: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 .member-form input{
 	width: 250px;
@@ -170,9 +177,10 @@ table {
 	outline: none;
 }
 .member-form .submit-button{
+	display: inline-block;
 	width: 120px;
+	height: 30px;
 	margin: 10px 20px 10px 60px;
-	padding      : 10px 0px;
 	border-radius: 7px;
 	background   : rgba(147, 102, 0, 0.8);
 	color        : #FFFFFF;
@@ -185,25 +193,6 @@ table {
 	border: none;
 	cursor    : pointer;
 	transform: scale(1.07);
-}
-.register-form {
-	display: flex;
-	flex-direction: column;
-	margin-top: 20px;
-	padding: 20px;
-	display: none;
-}
-/* member-signIn */
-.signIn-form{
-	display: flex;
-	flex-direction: column;
-	margin: 0px 0px 0px 50px;
-	padding: 20px;
-}
-.signIn-form img{
-	margin-top: 20px;
-	width        : 280px;
-	margin-bottom: 110px;
 }
 /* member-switch */
 .sign-switch span{
@@ -241,3 +230,12 @@ table {
 	box-shadow: none;
 	border    : none;
 }
+/* member-signIn */
+.signUp-form{
+	display: none;
+}
+.signIn-form img{
+	width        : 260px;
+	margin-bottom: 60px;
+}
+/* member */
