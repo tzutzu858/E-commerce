@@ -28,29 +28,32 @@
 				</div>
 				<div class="banner">
 					<div class="member-section ">
-							<form class="member-form signUp-form" action="" method="post">
+							<!-- 註冊 -->
+							<form class="member-form signUp-form" action="" method="post" onsubmit="return verify(this)">
 								帳號：
-								<input type="text" name="id" id="" value="" />
+								<input type="text" name="userid" id="" value="" />
 								姓名：
 								<input type="text" name="name" id="" value="" />
 								密碼：
 								<input type="text" name="password" id="" value="" />
 								再輸入一次：
-								<input type="text" name="password" id="" value="" />
-								生日：
+								<input type="text" name="password2" id="" value="" />
+								生日： 格式（YYYY-MM-DD）
 								<input type="text" name="birthday" id="" value="" />
 								電話：
 								<input type="text" name="phone" id="" value="" />
 								
 								<input type="submit" class="submit-button" name="" value="sign up" />
 							</form>
-							<form class="member-form signIn-form" action="" method="post">
+							<!-- 登入 -->
+							<form class="member-form signIn-form" action="" method="post" onsubmit="return verify(this)">
 								<img src="img/moon.png" >
 								帳號：
-								<input type="text" name="id" />
+								<input type="text" name="userid" />
 								密碼：
 								<input type="text" name="password">
-								<input type="submit" class="submit-button" name="" value="sign in" />
+								
+								<input type="submit" class="submit-button submit-signIn" name="" value="sign in" />
 							</form>
 							<div class="sign-switch">
 								<span>已有帳號了嗎</span>
