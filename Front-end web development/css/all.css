@@ -139,6 +139,32 @@ table {
     font-size : 14px;
     padding   : 12px;
 }
+/* index(goodlist) */
+.goodlist-intro{
+	text-align: center;
+}
+.goodlist-intro{
+	width: 50％;
+}
+.goodlist-intro h3{
+	margin: 20px;
+	color : #463e3a8c;
+}
+.goodlist-intro h2{
+	width: 300px;
+	font-size    : 32px;
+	border-left  : solid 15px #fac563;
+	border-radius: 5px;
+	margin: 30px auto;
+}
+.swiper{
+	margin-bottom: 70px;
+}
+.swiper-container {
+    width : 640px;
+    height: 390px;
+}
+
 /* member--community */
 .member-header{
 	background: url(../img/navbar_bg.png)  center/cover no-repeat;

@@ -1,55 +1,27 @@
-// var mySwiper = new Swiper('.swiper-container', {
-//     // Optional parameters
-//     // direction: 'vertical',
-//     loop: true,
-//     speed:1500,
-//     autoplay: {
-//        delay: 2000,
-//     },
-//     effect:'cube',
-//     // If we need pagination
-//     pagination: {
-//       el: '.swiper-pagination',
-//     },
-  
-//     // Navigation arrows
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-  
-//     // And if we need scrollbar
-//     scrollbar: {
-//       // el: '.swiper-scrollbar',
-//     },
-//   })
+
   // =================登入註冊頁面＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-  const signInForm = document.querySelector('.signIn-form');
+  var signInForm = document.querySelector('.signIn-form');
   var signInSpan = document.querySelector('.signIn-span');
   const signUpForm = document.querySelector('.signUp-form');
   var signUpSpan =document.querySelector('.signUp-span');
-  
-  // signIn.classList.toggle('signIn-session')
-  
-  /* ---------------登入和註冊 form 切換---------------------  */
   var signInSwitch = document.querySelector('.signIn-switch');
-  var signUpSwitch =document.querySelector('.sigUp-switch');
-  signInSwitch.onclick=function(e){  
-	e.preventDefault();
-	signInForm.setAttribute('style','display: flex;');
-	signUpForm.setAttribute('style','display: none;');
-	signInSpan.setAttribute('style','display: none;');
-	signUpSpan.setAttribute('style','display: inline;');
-	
-  }
-  signUpSwitch.onclick=function(e){
-	  e.preventDefault();
-	  signInForm.setAttribute('style','display: none;');
-	  signUpForm.setAttribute('style','display: flex;');
-	  signInSpan.setAttribute('style','display: inline;');
-	  signUpSpan.setAttribute('style','display: none;');
-	  
-  }
+  var signUpSwitch =document.querySelector('.sigUp-switch');  
+  /* ---------------登入和註冊 form 切換---------------------  */
+		signInSwitch.onclick=function(e){  
+			e.preventDefault(e);
+			signInForm.setAttribute('style','display: flex;');
+			signUpForm.setAttribute('style','display: none;');
+			signInSpan.setAttribute('style','display: none;');
+			signUpSpan.setAttribute('style','display: inline;');
+		}
+		signUpSwitch.onclick=function(e){
+			  e.preventDefault(e);
+			  signInForm.setAttribute('style','display: none;');
+			  signUpForm.setAttribute('style','display: flex;');
+			  signInSpan.setAttribute('style','display: inline;');
+			  signUpSpan.setAttribute('style','display: none;');  
+		}
+
   //----------------檢查註冊表單----------------------------
   function signUpverify(myform) {
               var errorMes = "";

@@ -13,6 +13,7 @@
 		
 		<link rel="shortcut icon" href="https://icons.iconarchive.com/icons/dakirby309/simply-styled/48/Java-icon.png">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 		<link rel="stylesheet" type="text/css" href="css/all.css"/>
 	</head>
 	<body>
@@ -31,8 +32,32 @@
 					<p>A dedached space for the soul to settle in the hustle and bustle of the confused city.</p>
 				</div>
 			</div>
-			<div class="context">
-				這是商品列表
+			<div class="goodlist-intro">
+				<div class="goodlist-intro-title">
+				    <h3>選擇下列商品，讓今夜在迷茫城市喧囂裡</h3>
+				    <h3>有個讓心靈沉澱的超然空間</h3>
+				    <h2>熱銷搶購中</h2>
+				</div>	
+				<div class="swiper">
+				    <div class="swiper-container">
+				        <!-- Additional required wrapper -->
+				        <div class="swiper-wrapper">
+				            <!-- Slides -->
+				            <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>
+				            <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>
+				            <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>    
+				        </div>
+				        <!-- If we need pagination -->
+				        <!-- <div class="swiper-pagination"></div> -->
+				    
+				        <!-- If we need navigation buttons -->
+				        <!-- <div class="swiper-button-prev"></div>
+				        <div class="swiper-button-next"></div> -->
+				    
+				        <!-- If we need scrollbar -->
+				        <!-- <div class="swiper-scrollbar"></div> -->
+				    </div>
+				</div>	
 			</div>
 			<div class="footer">
 				<div class="footer_info">
@@ -44,18 +69,19 @@
 				<div class="footer_icon">
 					<a href="googlist.html"><img class="footer_loge" src="svg/title_logo.svg" /></a>
                     <ul class="social_network">
-                        <li><a href=""></a><img class='icon' src="svg/facebook.svg"/></a></li>
+                        <li><a href=""><img class='icon' src="svg/facebook.svg"/></a></li>
                         <li><a href=""><img class='icon' src="svg/instagram-sketched.svg" /></a></li>
                         <li><a href=""><img class='icon' src="svg/twitter.svg" /></a></li>
                     </ul>
 				</div>
 			</div>
 			<div class="footer_bottom">
-            happy coding © 2020 I Love Java.有限公司版權所有
+				<p>happy coding © 2020 I Love Java.有限公司版權所有</p>
 			</div>
 		</div>
-		
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>	
-		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="js/goodlist.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>	
 	</body>
 </html>
