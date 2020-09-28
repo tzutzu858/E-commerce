@@ -140,17 +140,17 @@ table {
     padding   : 12px;
 }
 /* index(goodlist) */
-.goodlist-intro{
+.goodslist-intro{
 	text-align: center;
 }
-.goodlist-intro{
+.goodslist-intro{
 	width: 50％;
 }
-.goodlist-intro h3{
+.goodslist-intro h3{
 	margin: 20px;
 	color : #463e3a8c;
 }
-.goodlist-intro h2{
+.goodslist-intro h2{
 	width: 300px;
 	font-size    : 32px;
 	border-left  : solid 15px #fac563;
@@ -164,7 +164,12 @@ table {
     width : 640px;
     height: 390px;
 }
-
+.
+.buy_icon {
+    width        : 20px;
+    margin-top   : 15px;
+    margin-bottom: 40px;
+}
 /* member--community */
 .member-header{
 	background: url(../img/navbar_bg.png)  center/cover no-repeat;
