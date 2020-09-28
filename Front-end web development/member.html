@@ -29,7 +29,7 @@
 				<div class="banner">
 					<div class="member-section ">
 							<!-- 註冊 -->
-							<form class="member-form signUp-form" action="" method="post" onsubmit="return verify(this)">
+							<form class="member-form signUp-form" action="" method="post" onsubmit="return signUpverify(this)">
 								帳號：
 								<input type="text" name="userid" id="" value="" />
 								姓名：
@@ -46,17 +46,17 @@
 								<input type="submit" class="submit-button" name="" value="sign up" />
 							</form>
 							<!-- 登入 -->
-							<form class="member-form signIn-form" action="" method="post" onsubmit="return verify(this)">
+							<form class="member-form signIn-form" action="" method="post" onsubmit="return signIpverify(this)">
 								<img src="img/moon.png" >
 								帳號：
 								<input type="text" name="userid" />
 								密碼：
 								<input type="text" name="password">
 								
-								<input type="submit" class="submit-button submit-signIn" name="" value="sign in" />
+								<input type="submit" class="submit-button" name="" value="sign in" />
 							</form>
 							<div class="sign-switch">
-								<span>已有帳號了嗎</span>
+								<span class="signIn-span">已有帳號了嗎</span><span class="signUp-span">還沒有註冊嗎</span>
 								<a href="" class="signIn-switch">sign in</a><a href="" class="sigUp-switch">sign up</a>
 							</div>
 						</div>
