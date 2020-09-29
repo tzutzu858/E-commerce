@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>購物車</title>
+		<title>會員專區</title>
 		
 		<meta property="og:title" content="DreamStore" />
 	 	<meta property="og:description" content="java">
@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<div class="wraper">
-			<div class="header">
+			<div class="header member-header">
 				<div class="nav-bar">
 					<h1><a href="goods_list.jsp">Dream</a></h1>
 					<ul class="menu">
@@ -29,12 +29,48 @@
 					</ul>
 				</div>
 				<div class="banner">
-					<h2>BUY A DREAM</h2>
-					<p>A dedached space for the soul to settle in the hustle and bustle of the confused city.</p>
+					<ul>
+						<c:forEach var="error" items="${errors}">
+							<li class="error">${error}</li>
+						</c:forEach>
+					</ul>
+					<div class="member-section ">
+							<!-- 註冊 -->
+							<form class="member-form signUp-form" action="controller" method="post" onsubmit="return signUpverify(this)">
+								帳號：
+								<input type="text" name="userid" id="" value="" />
+								姓名：
+								<input type="text" name="name" id="" value="" />
+								密碼：
+								<input type="text" name="password" id="" value="" />
+								再輸入一次：
+								<input type="text" name="password2" id="" value="" />
+								生日： 格式（YYYY-MM-DD）
+								<input type="text" name="birthday" id="" value="" />
+								電話：
+								<input type="text" name="phone" id="" value="" />
+								
+								<input type="submit" class="submit-button" name="" value="sign up" />
+								<input type="hidden" name="action" value="reg" >
+							</form>
+							<!-- 登入 -->
+							<form class="member-form signIn-form" action="controller" method="post" onsubmit="return signIpverify(this)">
+								<img src="img/moon.png" >
+								帳號：
+								<input type="text" name="userid" />
+								密碼：
+								<input type="text" name="password">
+								
+								<input type="submit" class="submit-button" name="" value="sign in" />
+
+								<input type="hidden" name="action" value="login">
+							</form>
+							<div class="sign-switch">
+								<span class="signIn-span">已有帳號了嗎</span><span class="signUp-span">還沒有註冊嗎</span>
+								<a href="" class="signIn-switch">sign in</a><a href="" class="sigUp-switch">sign up</a>
+							</div>
+						</div>
 				</div>
-			</div>	
-			<div class="context">
-				這是購物車
 			</div>
 			<div class="footer">
 				<div class="footer_info">
@@ -56,8 +92,9 @@
             happy coding © 2020 I Love Java.有限公司版權所有
 			</div>
 		</div>
-		
+		<script src="js/member.js" type="text/javascript" charset="utf-8"></script>
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>	
 		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 	</body>
 </html>
+e

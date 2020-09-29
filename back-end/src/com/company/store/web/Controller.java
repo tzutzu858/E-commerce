@@ -76,7 +76,7 @@ public class Controller extends javax.servlet.http.HttpServlet {
 
             if (errors.size() > 0) { // 驗證失敗
                 request.setAttribute("errors", errors);
-                request.getRequestDispatcher("customer_reg.jsp").forward(request, response);
+                request.getRequestDispatcher("member.jsp").forward(request, response);
             } else { // 驗證成功
                 Customer customer = new Customer();
                 customer.setId(userid);
@@ -94,12 +94,12 @@ public class Controller extends javax.servlet.http.HttpServlet {
                 try {
                     // 註冊成功
                     customerService.register(customer);
-                    request.getRequestDispatcher("login.jsp").forward(request, response);
+                    request.getRequestDispatcher("goods_list.jsp").forward(request, response);
                 } catch (ServiceException e) {
                     // ID已經被註冊
                     errors.add("ID已經有人使用，請重新輸入！");
                     request.setAttribute("errors", errors);
-                    request.getRequestDispatcher("customer_reg.jsp").forward(request, response);
+                    request.getRequestDispatcher("member.jsp").forward(request, response);
                 }
 
             }
@@ -115,12 +115,12 @@ public class Controller extends javax.servlet.http.HttpServlet {
             if (customerService.login(customer)) { // 登入成功
                 HttpSession session = request.getSession();
                 session.setAttribute("customer", customer);
-                request.getRequestDispatcher("main.jsp").forward(request, response);
+                request.getRequestDispatcher("goods_list.jsp").forward(request, response);
             } else { // 登入失敗
                 List<String> errors = new ArrayList<>();
                 errors.add("您輸入的帳號或密碼有誤！");
                 request.setAttribute("errors", errors);
-                request.getRequestDispatcher("login.jsp").forward(request, response);
+                request.getRequestDispatcher("member.jsp").forward(request, response);
             }
 
         } else if ("list".equals(action)) {
