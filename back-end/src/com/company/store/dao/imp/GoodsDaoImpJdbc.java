@@ -35,7 +35,7 @@ public class GoodsDaoImpJdbc implements GoodsDao {
     @Override
     public List<Goods> findAll() {
         List<Goods> list = new ArrayList<Goods>();
-        String sql = "select id,name,price,description,brand,cpu_brand,cpu_type,memory_capacity,hd_capacity,card_model,displaysize,image from Goods";
+        String sql = "select id,name,price,description,image from Goods";
 
         jdbcTemplate.query(conn -> {
             PreparedStatement ps = conn.prepareStatement(sql);
