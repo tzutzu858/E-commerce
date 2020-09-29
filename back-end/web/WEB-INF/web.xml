@@ -21,7 +21,7 @@
         <servlet-class>com.company.store.web.Controller</servlet-class>
         <init-param>
             <param-name>pageSize</param-name>
-            <param-value>10</param-value>
+            <param-value>9</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>

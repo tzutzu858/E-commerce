@@ -22,9 +22,9 @@
 		<div class="wraper">
 			<div class="header">
 				<div class="nav-bar">
-					<h1><a href="goods_list.jsp">Dream</a></h1>
+					<h1><a href="controller?action=list">Dream</a></h1>
 					<ul class="menu">
-						<li><a href="goods_list.jsp"><i class="list icon"></i>商品列表</a></li>
+						<li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
 						<li><a href="cart.jsp"><i class="cart icon"></i>購物車</a></li>
 						<li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
 					</ul>
@@ -67,7 +67,7 @@
 						<c:forEach var="goods" items="${goodsList}" varStatus="status">
 							<li>
 								<a href="controller?action=detail&id=${goods.id}">
-									<img src="${goodsList}" alt="">
+									<img src="img/${goods.image}" alt="">
 								</a>
 								<div class="buy-info">
 									<h5>${goods.name}</h5>
@@ -87,6 +87,7 @@
 					  <li><a href="#">6</a></li>
 					  <li><a href="#">7</a></li>
 					  <li><a href="#">»</a></li>
+						<a href="controller?action=list">商品列表</a></p>
 					</ul>
 				</div>	
 			</div>
