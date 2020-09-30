@@ -243,6 +243,11 @@ table {
 	font-size: 20px;
 	color: rgba(153, 150, 116,0.8);
 }
+.pagination li a.active{
+	background: rgba(153, 150, 116,0.8);
+	color: #F0F5F4;
+	border-radius: 5px;
+}
 .pagination li:hover a{
 	color: #F0F5F4;
 }
