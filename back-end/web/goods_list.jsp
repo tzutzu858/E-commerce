@@ -45,10 +45,10 @@
 				        <!-- Additional required wrapper -->
 				        <div class="swiper-wrapper">
 				            <!-- Slides -->
-				            <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>
-				            <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>
-				            <div class="swiper-slide"><img src="img/cat-3169476_640.jpg" ></div>    
-				        </div>
+							<c:forEach var="goods" items="${goodsList}" varStatus="status">
+				            	<div class="swiper-slide"><img src="img/${goods.image}" ></div>
+							</c:forEach>
+						</div>
 				        <!-- If we need pagination -->
 				        <!-- <div class="swiper-pagination"></div> -->
 				    
@@ -78,16 +78,15 @@
 						</c:forEach>
 						</ul>
 					<ul class="pagination">
-					  <li><a href="#">«</a></li>
-					  <li><a href="#">1</a></li>
-					  <li><a class="active" href="#">2</a></li>
-					  <li><a href="#">3</a></li>
-					  <li><a href="#">4</a></li>
-					  <li><a href="#">5</a></li>
-					  <li><a href="#">6</a></li>
-					  <li><a href="#">7</a></li>
-					  <li><a href="#">»</a></li>
-						<a href="controller?action=list">商品列表</a></p>
+					  <li><a href="controller?action=paging&page=prev">«</a></li>
+						<c:forEach var="page" begin="1" end="${totalPageNumber}">
+							<li><a
+									<c:if test="${page == currentPage}">
+										class="active"
+									</c:if>
+									href="controller?action=paging&page=${page}">${page}</a></li>
+						</c:forEach>
+					  <li><a href="controller?action=paging&page=next">»</a></li>
 					</ul>
 				</div>	
 			</div>
@@ -99,7 +98,7 @@
                     <p>email：java02@thatsdreaming.com.tw</p>
                 </div>
 				<div class="footer_icon">
-					<a href="goods_list.jsp"><img class="footer_loge" src="svg/title_logo.svg" /></a>
+					<a href="controller?action=list"><img class="footer_loge" src="svg/title_logo.svg" /></a>
                     <ul class="social_network">
                         <li><a href=""><img class='icon' src="svg/facebook.svg"/></a></li>
                         <li><a href=""><img class='icon' src="svg/instagram-sketched.svg" /></a></li>

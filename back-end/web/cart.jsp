@@ -21,9 +21,9 @@
 		<div class="wraper">
 			<div class="header">
 				<div class="nav-bar">
-					<h1><a href="goods_list.jsp">Dream</a></h1>
+					<h1><a href="controller?action=list">Dream</a></h1>
 					<ul class="menu">
-						<li><a href="goods_list.jsp"><i class="list icon"></i>商品列表</a></li>
+						<li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
 						<li><a href="cart.jsp"><i class="cart icon"></i>購物車</a></li>
 						<li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
 					</ul>
@@ -44,9 +44,9 @@
                     <p>email：java02@thatsdreaming.com.tw</p>
                 </div>
 				<div class="footer_icon">
-					<a href="goods_list.jsp"><img class="footer_loge" src="svg/title_logo.svg" /></a>
+					<a href="controller?action=list"><img class="footer_loge" src="svg/title_logo.svg" /></a>
                     <ul class="social_network">
-                        <li><a href=""></a><img class='icon' src="svg/facebook.svg"/></a></li>
+                        <li><a href=""><img class='icon' src="svg/facebook.svg"/></a></li>
                         <li><a href=""><img class='icon' src="svg/instagram-sketched.svg" /></a></li>
                         <li><a href=""><img class='icon' src="svg/twitter.svg" /></a></li>
                     </ul>
