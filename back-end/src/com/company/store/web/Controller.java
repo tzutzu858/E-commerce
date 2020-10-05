@@ -208,7 +208,6 @@ public class Controller extends javax.servlet.http.HttpServlet {
                     flag++;
                 }
             }
-
             // 購物車中没有打勾(選擇)的商品
             if (flag == 0) {
                 Map<String, Object> item = new HashMap<>();
