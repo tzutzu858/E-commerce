@@ -161,14 +161,16 @@ table {
 	margin: 30px auto;
 }
 .swiper-container{
-	width: 600px;
+	width: 500px;
+	height: 300px;
 }
-.swiper-wrapper{
-	margin-bottom: 70px;
-}
+/*.swiper-wrapper{*/
+	/*margin-bottom: 70px;*/
+	/*height: 100%;*/
+/*}*/
 .swiper-wrapper img{
 	width: 100%;
-	height: 300px;
+	height: 100%;
 }
 /*.swiper-container {*/
     /*width : 640px;*/

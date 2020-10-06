@@ -42,9 +42,9 @@
 								姓名：
 								<input type="text" name="name" id="" value="" />
 								密碼：
-								<input type="text" name="password" id="" value="" />
+								<input type="password" name="password" id="" value="" />
 								再輸入一次：
-								<input type="text" name="password2" id="" value="" />
+								<input type="password" name="password2" id="" value="" />
 								生日： 格式（YYYY-MM-DD）
 								<input type="text" name="birthday" id="" value="" />
 								電話：
@@ -59,7 +59,7 @@
 								帳號：
 								<input type="text" name="userid" />
 								密碼：
-								<input type="text" name="password">
+								<input type="password" name="password">
 								
 								<input type="submit" class="submit-button" name="" value="sign in" />
 
