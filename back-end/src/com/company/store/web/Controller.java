@@ -267,7 +267,7 @@ public class Controller extends javax.servlet.http.HttpServlet {
             for (Map<String, Object> item : cart) {
                 Long goodsid = (Long) item.get("goodsid");
                 String strquantity = request.getParameter("quantity_" + goodsid);
-                int quantity = 0;
+                 int quantity = 0;
                 try {
                     quantity = new Integer(strquantity);
                 } catch (Exception e) {
