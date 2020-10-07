@@ -1,3 +1,3 @@
 # E-commerce
-分支開得好亂啊~~~~
-測試 : finish.tzutzu858.tw
+分支開得好亂啊~<br>
+測試 : http://finish.tzutzu858.tw<br>
