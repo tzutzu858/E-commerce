@@ -1,6 +1,13 @@
 # E-commerce
 
+<<<<<<< HEAD
 https://tzutzu858.github.io/E-commerce/Front-end%20web%20development/<br />
+=======
+https://tzutzu858.github.io/E-commerce/<br />
+
+index : https://tzutzu858.github.io/E-commerce/Front-end%20web%20development/
+<br />
+>>>>>>> feature/newhtml
 <br />
 [swiper](https://github.com/tzutzu858/E-commerce/blob/master/Front-end%20web%20development/README.md#20200915-%E8%BC%AA%E6%92%AD%E6%95%88%E6%9E%9C)
 ## design sketch :<br />
