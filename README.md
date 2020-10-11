@@ -19,5 +19,5 @@
 註冊成功後，跳回登入頁面，登入成功跳首頁顯示名字<br>
 <img src="https://github.com/tzutzu858/ChallengeDailyUI/blob/master/gif/register.gif?raw=true" width="600" ><br>
 <br>
-如果沒有登入會員，結帳會跳 alert ，登入完可以順利結帳<br>
+如果沒有登入會員，結帳會跳 alert 請先登入會員，登入完可以順利結帳<br>
 <img src="https://github.com/tzutzu858/ChallengeDailyUI/blob/master/gif/order.gif?raw=true?raw=true" width="600" ><br>
