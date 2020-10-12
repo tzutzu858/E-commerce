@@ -12,6 +12,8 @@ import com.company.store.server.imp.OrdersServiceImp;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -45,7 +47,7 @@ public class Controller extends javax.servlet.http.HttpServlet {
         doGet(request,response);
     }
 
-    protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //從client 提交的 操作參數
         String action = request.getParameter("action");
 
@@ -59,6 +61,7 @@ public class Controller extends javax.servlet.http.HttpServlet {
 
             // 服務端驗證
             List<String> errors = new ArrayList<>();
+            List<String> ok = new ArrayList<>();
             if (userid == null || userid.equals("")) {
                 errors.add("帳號不能為空值！");
             }
@@ -94,7 +97,9 @@ public class Controller extends javax.servlet.http.HttpServlet {
                 try {
                     // 註冊成功
                     customerService.register(customer);
-                    request.getRequestDispatcher("goods_list.jsp").forward(request, response);
+                    ok.add("註冊成功！");
+                    request.setAttribute("ok", ok);
+                    request.getRequestDispatcher("member.jsp").forward(request, response);
                 } catch (ServiceException e) {
                     // ID已經被註冊
                     errors.add("ID已經有人使用，請重新輸入！");
@@ -112,10 +117,12 @@ public class Controller extends javax.servlet.http.HttpServlet {
             customer.setId(userid);
             customer.setPassword(password);
 
+
             if (customerService.login(customer)) { // 登入成功
                 HttpSession session = request.getSession();
                 session.setAttribute("customer", customer);
-                request.getRequestDispatcher("goods_list.jsp").forward(request, response);
+                session.setAttribute("customerName", customer.getName()); // 把使用者名字存到 session
+                request.getRequestDispatcher("controller?action=list").forward(request, response);
             } else { // 登入失敗
                 List<String> errors = new ArrayList<>();
                 errors.add("您輸入的帳號或密碼有誤！");
@@ -123,7 +130,12 @@ public class Controller extends javax.servlet.http.HttpServlet {
                 request.getRequestDispatcher("member.jsp").forward(request, response);
             }
 
-        } else if ("list".equals(action)) {
+        }else if ("logout".equals(action)) {
+            HttpSession session = request.getSession();
+            session.removeAttribute("customerName");
+            request.getRequestDispatcher("controller?action=list").forward(request, response);
+        }
+        else if ("list".equals(action)) {
             //------------商品列表--------------
             List<Goods> goodsList = goodsService.queryAll();
 
@@ -144,6 +156,13 @@ public class Controller extends javax.servlet.http.HttpServlet {
 
             request.setAttribute("goodsList", goodsList.subList(start, end));
             request.getRequestDispatcher("goods_list.jsp").forward(request, response);
+
+            //------------有登入秀名字----------------
+
+            HttpSession session = request.getSession();
+            session.getAttribute("customerName");
+
+
 
         } else if ("paging".equals(action)) {
             //------------商品列表分頁-------------
@@ -185,7 +204,7 @@ public class Controller extends javax.servlet.http.HttpServlet {
             Long goodsid = new Long(request.getParameter("id"));
             String goodsname = request.getParameter("name");
             Float price = new Float(request.getParameter("price"));
-
+            String goodsimg = request.getParameter("img");
             // 購物車結構是List中包含Map，每一個Map是一個商品
             // 從Session中取出的購物車
             List<Map<String, Object>> cart = (List<Map<String, Object>>) request.getSession().getAttribute("cart");
@@ -216,6 +235,7 @@ public class Controller extends javax.servlet.http.HttpServlet {
                 item.put("goodsname", goodsname);
                 item.put("quantity", 1);
                 item.put("price", price);
+                item.put("goodsimg", goodsimg);
                 // 添加到购物车
                 cart.add(item);
             }
@@ -259,6 +279,8 @@ public class Controller extends javax.servlet.http.HttpServlet {
             }
 
             request.setAttribute("total", total);
+            HttpSession session = request.getSession();
+            session.getAttribute("customerName");
             request.getRequestDispatcher("cart.jsp").forward(request, response);
         } else if ("sub_ord".equals(action)) {
             //------------提交訂單-----------

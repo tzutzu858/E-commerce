@@ -1,0 +1,40 @@
+
+.form_block_input {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
+
+.input-ok {
+    visibility: hidden;
+    margin: 5px;
+}
+
+.input-err {
+    font-size: 16px;
+    color: #e74149;
+    visibility: visible;
+    margin-top: 16px;
+    margin-left: 13px;
+    width: 100px;
+}
+
+.error {
+    color: red;
+    font-size: 24px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+.ok {
+    color: darkcyan;
+    font-size: 24px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+::placeholder {
+    color: #a19f9f;
+    font-size: 14px;
+}
+
