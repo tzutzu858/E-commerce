@@ -1,7 +1,7 @@
 # E-commerce
-分支開得好亂啊~<br>
 測試 : http://fin1008.tzutzu858.tw<br>
-目前 bug : 詳細商品頁面未完成，所以點進去是 404<br>
+遠端主機的詳細商品頁面沒有更新上去，所以點進去是 404<br>
+其他小 bug 也是待修正<br>
 <br>
 ## 架構簡略圖<br>
 ![](https://i.imgur.com/FfItxNs.jpg)<br>
