@@ -31,10 +31,9 @@ public class DBhelp {
 //   private static String user = "root";
 //   private static String password = "root123";
 
-    public static Connection getConnection()throws SQLException,ClassNotFoundException {
+    public static Connection getConnection() throws SQLException, ClassNotFoundException {
         Class.forName(info.getProperty("driver"));
-       Connection connection = DriverManager.getConnection(info.getProperty("url"),info);
-       return connection;
+        Connection connection = DriverManager.getConnection(info.getProperty("url"), info);
+        return connection;
     }
-
 }

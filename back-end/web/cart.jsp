@@ -97,7 +97,7 @@
                                         確定將訂單結帳 ?
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" >取消</button>
                                         <button type="submit" class="btn btn-primary delCommodity">確定</button>
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@
                 <c:if test="${not empty cart}">
                     <span class="total_price" id="total">${total}</span>
                     <input class="settle_accounts_btn" type="button" value="結帳" data-toggle="modal"
-                           data-target="#checkAccounts" >
+                           data-target="#checkAccounts">
                 </c:if>
             </div>
             <input type="hidden" name="action" value="sub_ord">

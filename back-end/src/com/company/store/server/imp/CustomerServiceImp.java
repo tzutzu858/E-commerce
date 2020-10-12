@@ -16,7 +16,7 @@ public class CustomerServiceImp implements CustomerService {
         Customer dbCustomer = customerDao.findByPk(customer.getId());
 
         if (dbCustomer != null &&
-                dbCustomer.getPassword().equals(customer.getPassword())) {
+            dbCustomer.getPassword().equals(customer.getPassword())) {
             //登入成功
             customer.setPhone(dbCustomer.getPhone());
             customer.setName(dbCustomer.getName());
