@@ -1,0 +1,21 @@
+.goods_detail_block {
+    /*background-image: url("img/ex.jpg");*/
+    /*background-size: cover;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+    background-image:url("../img/ex.jpg");
+    background-size: cover;
+}
+
+.goods_msg {
+
+    width: 400px;
+    word-break: break-word;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    word-spacing: 3px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
