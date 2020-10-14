@@ -87,7 +87,7 @@ table {
 .header .menu {
     margin-top: 20px;
     display: flex;
-    max-width: 400px;
+    max-width: 500px;
     justify-content: space-around;
 }
 
@@ -95,13 +95,33 @@ table {
     display: inline-block;
     color: #a19f9f;
     text-align: center;
-    max-width: 110px;
+    max-width: 150px;
     margin: 0 10px;
     font-size: 20px;
 }
 
 .header .menu li a:hover {
     color: #696868;
+}
+
+.badge_add {
+    margin-left: 5px;
+    background:	#E0E0E0;
+    padding:2px 6px;
+    width: 20px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: default;
+    font-size: 14px;
+}
+
+.shopping_cart {
+    margin-left: 20px;
+}
+
+.hidden {
+    visibility:hidden;
 }
 
 .banner {

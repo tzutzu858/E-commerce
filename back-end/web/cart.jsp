@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
     <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/dakirby309/simply-styled/48/Java-icon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="css/order_page_style.css">
+
     <title>Dream Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -28,8 +28,14 @@
             <h1><a href="controller?action=list">Dream</a></h1>
             <ul class="menu">
                 <li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
-                <li><a href="cart.jsp"><i class="cart icon"></i>購物車</a></li>
-                <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
+<%--                <input type="hidden" name="action" value="update_ord">--%>
+                <li><a href="controller?action=cart"><i class="cart icon"></i>購物車</a></li>
+                <c:if test="${empty customerName}">
+                    <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
+                </c:if>
+                <c:if test="${not empty customerName}">
+                    <li><a href="controller?action=logout"><i class="id card icon"></i>登出</a></li>
+                </c:if>
             </ul>
         </div>
     </div>

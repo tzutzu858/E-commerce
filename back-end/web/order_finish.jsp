@@ -56,7 +56,7 @@
         <div class="nav-bar">
             <h1><a href="controller?action=list">Dream</a></h1>
             <ul class="menu">
-                <li><a href=href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
+                <li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
                 <li><a href="controller?action=cart"><i class="cart icon"></i>購物車</a></li>
                 <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
             </ul>
