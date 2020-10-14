@@ -297,13 +297,30 @@ public class Controller extends javax.servlet.http.HttpServlet {
 
                 item.put("quantity", quantity);
             }
-
+            System.out.println("結帳過後的cart : "+cart);
             // 提交訂單
             String ordersid = ordersService.submitOrders(cart);
             request.setAttribute("ordersid", ordersid);
             request.getRequestDispatcher("order_finish.jsp").forward(request, response);
             // 清空購物車
             request.getSession().removeAttribute("cart");
+        } else if ("update_ord".equals(action)) {
+            //-------------從購物車進入主頁面---------------
+            // Session 中取出購物車
+            List<Map<String, Object>> cart = (List<Map<String, Object>>) request.getSession().getAttribute("cart");
+            for (Map<String, Object> item : cart) {
+                Long goodsid = (Long) item.get("goodsid");
+                String strquantity = request.getParameter("quantity_" + goodsid);
+                int quantity = 0;
+                try {
+                    quantity = new Integer(strquantity);
+                } catch (Exception e) {
+                }
+
+                item.put("quantity", quantity);
+            }
+            System.out.println("更新過後的cart : "+cart);
+            request.getRequestDispatcher("controller?action=list").forward(request, response);
         } else if ("main".equals(action)) {
             //--------------進入主頁面--------------------
             request.getRequestDispatcher("main.jsp").forward(request, response);

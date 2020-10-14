@@ -84,8 +84,7 @@
                         <div class="buy-info">
                             <h5 class="goods-name">${goods.name}</h5>
                             <i class="goods-price">${goods.price}</i>
-                            <span><a
-                                    href="controller?action=add&pagename=list&id=${goods.id}&name=${goods.name}&price=${goods.price}&img=${goods.image}"><i
+                            <span><a href="controller?action=add&pagename=list&id=${goods.id}&name=${goods.name}&price=${goods.price}&img=${goods.image}"><i
                                     class="add icon"></i></a></span>
                         </div>
                     </li>

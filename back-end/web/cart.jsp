@@ -28,8 +28,14 @@
             <h1><a href="controller?action=list">Dream</a></h1>
             <ul class="menu">
                 <li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
-                <li><a href="cart.jsp"><i class="cart icon"></i>購物車</a></li>
-                <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
+<%--                <input type="hidden" name="action" value="update_ord">--%>
+                <li><a href="controller?action=cart"><i class="cart icon"></i>購物車</a></li>
+                <c:if test="${empty customerName}">
+                    <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
+                </c:if>
+                <c:if test="${not empty customerName}">
+                    <li><a href="controller?action=logout"><i class="id card icon"></i>登出</a></li>
+                </c:if>
             </ul>
         </div>
     </div>
