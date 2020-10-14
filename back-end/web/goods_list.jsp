@@ -16,7 +16,10 @@
     <link rel="shortcut icon" href="https://icons.iconarchive.com/icons/dakirby309/simply-styled/48/Java-icon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/all.css"/>
+
 </head>
 <body>
 <div class="wraper">
@@ -31,7 +34,14 @@
 
             <ul class="menu">
                 <li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
-                <li><a href="controller?action=cart"><i class="cart icon"></i>購物車</a></li>
+
+                <li class="shopping_cart">
+                    <a href="controller?action=cart">
+                        <i class="cart icon"></i>購物車
+                        <input id="cart_num" type="text" class="badge_add" readonly="readonly" value="${num}">
+                    </a>
+                </li>
+
                 <c:if test="${empty customerName}">
                     <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
                 </c:if>
@@ -84,8 +94,9 @@
                         <div class="buy-info">
                             <h5 class="goods-name">${goods.name}</h5>
                             <i class="goods-price">${goods.price}</i>
-                            <span><a href="controller?action=add&pagename=list&id=${goods.id}&name=${goods.name}&price=${goods.price}&img=${goods.image}"><i
-                                    class="add icon"></i></a></span>
+                            <span><a class="add_goods"
+                                     href="controller?action=add&pagename=list&id=${goods.id}&name=${goods.name}&price=${goods.price}&img=${goods.image}&num=${num}"><i
+                                    class="add icon" ></i></a></span>
                         </div>
                     </li>
                 </c:forEach>

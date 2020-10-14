@@ -22,7 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Pattern;
 
-@javax.servlet.annotation.WebServlet(name = "Controller",urlPatterns = {"/controller}"})
+@javax.servlet.annotation.WebServlet(name = "Controller", urlPatterns = {"/controller}"})
 public class Controller extends javax.servlet.http.HttpServlet {
 
     private DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -42,9 +42,10 @@ public class Controller extends javax.servlet.http.HttpServlet {
 
 
     }
+
     @Override
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -130,14 +131,20 @@ public class Controller extends javax.servlet.http.HttpServlet {
                 request.getRequestDispatcher("member.jsp").forward(request, response);
             }
 
-        }else if ("logout".equals(action)) {
+        } else if ("logout".equals(action)) {
             HttpSession session = request.getSession();
             session.removeAttribute("customerName");
             request.getRequestDispatcher("controller?action=list").forward(request, response);
-        }
-        else if ("list".equals(action)) {
+        } else if ("list".equals(action)) {
             //------------商品列表--------------
             List<Goods> goodsList = goodsService.queryAll();
+
+            HttpSession session = request.getSession();
+            session.getAttribute("num");
+            if (session.getAttribute("num") == null) {
+                session.setAttribute("num", 0);
+            }
+
 
             if (goodsList.size() % pageSize == 0) {
                 totalPageNumber = goodsList.size() / pageSize;
@@ -159,9 +166,8 @@ public class Controller extends javax.servlet.http.HttpServlet {
 
             //------------有登入秀名字----------------
 
-            HttpSession session = request.getSession();
-            session.getAttribute("customerName");
 
+            session.getAttribute("customerName");
 
 
         } else if ("paging".equals(action)) {
@@ -205,10 +211,11 @@ public class Controller extends javax.servlet.http.HttpServlet {
             String goodsname = request.getParameter("name");
             Float price = new Float(request.getParameter("price"));
             String goodsimg = request.getParameter("img");
+            Integer count = new Integer(request.getParameter("num"));//購物車旁邊的商品項數字
             // 購物車結構是List中包含Map，每一個Map是一個商品
             // 從Session中取出的購物車
             List<Map<String, Object>> cart = (List<Map<String, Object>>) request.getSession().getAttribute("cart");
-
+            HttpSession session = request.getSession();
             if (cart == null) { // 第一次取出是null
                 cart = new ArrayList<Map<String, Object>>();
                 request.getSession().setAttribute("cart", cart);
@@ -223,7 +230,6 @@ public class Controller extends javax.servlet.http.HttpServlet {
                     Integer quantity = (Integer) item.get("quantity");
                     quantity++;
                     item.put("quantity", quantity);
-
                     flag++;
                 }
             }
@@ -238,6 +244,8 @@ public class Controller extends javax.servlet.http.HttpServlet {
                 item.put("goodsimg", goodsimg);
                 // 添加到购物车
                 cart.add(item);
+                count++;
+                session.setAttribute("num", count);
             }
 
             System.out.println(cart);
@@ -289,7 +297,7 @@ public class Controller extends javax.servlet.http.HttpServlet {
             for (Map<String, Object> item : cart) {
                 Long goodsid = (Long) item.get("goodsid");
                 String strquantity = request.getParameter("quantity_" + goodsid);
-                 int quantity = 0;
+                int quantity = 0;
                 try {
                     quantity = new Integer(strquantity);
                 } catch (Exception e) {
@@ -297,7 +305,7 @@ public class Controller extends javax.servlet.http.HttpServlet {
 
                 item.put("quantity", quantity);
             }
-            System.out.println("結帳過後的cart : "+cart);
+            System.out.println("結帳過後的cart : " + cart);
             // 提交訂單
             String ordersid = ordersService.submitOrders(cart);
             request.setAttribute("ordersid", ordersid);
@@ -319,19 +327,19 @@ public class Controller extends javax.servlet.http.HttpServlet {
 
                 item.put("quantity", quantity);
             }
-            System.out.println("更新過後的cart : "+cart);
+            System.out.println("更新過後的cart : " + cart);
             request.getRequestDispatcher("controller?action=list").forward(request, response);
         } else if ("main".equals(action)) {
             //--------------進入主頁面--------------------
             request.getRequestDispatcher("main.jsp").forward(request, response);
-        }else if ("logout".equals(action)) {
+        } else if ("logout".equals(action)) {
             //-----------註銷-----------------------
             // 清空購物車
             request.getSession().removeAttribute("cart");
             // 清除登入(登出)
             request.getSession().removeAttribute("customer");
             request.getRequestDispatcher("login.jsp").forward(request, response);
-        }else if ("reg_init".equals(action)) {
+        } else if ("reg_init".equals(action)) {
             // -----------客户註冊頁面進入------------
             request.getRequestDispatcher("customer_reg.jsp").forward(request, response);
         }
