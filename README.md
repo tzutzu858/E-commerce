@@ -1,5 +1,6 @@
 # E-commerce
-測試 : http://fin1008.tzutzu858.tw<br>
+測試(舊) : http://master.tzutzu858.tw<br>
+測試(新) : http://develop.tzutzu858.tw<br>
 遠端主機的詳細商品頁面沒有更新上去，所以點進去是 404<br>
 其他小 bug 也是待修正<br>
 <br>
