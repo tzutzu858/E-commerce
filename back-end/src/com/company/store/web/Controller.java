@@ -235,6 +235,8 @@ public class Controller extends javax.servlet.http.HttpServlet {
             }
             // 購物車中没有打勾(選擇)的商品
             if (flag == 0) {
+                count++;
+                session.setAttribute("num", count);
                 Map<String, Object> item = new HashMap<>();
                 // item 結構是Map [商品id，商品名稱，價格，數量]
                 item.put("goodsid", goodsid);
@@ -244,8 +246,6 @@ public class Controller extends javax.servlet.http.HttpServlet {
                 item.put("goodsimg", goodsimg);
                 // 添加到购物车
                 cart.add(item);
-                count++;
-                session.setAttribute("num", count);
             }
 
             System.out.println(cart);
