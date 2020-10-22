@@ -1,5 +1,6 @@
 html {
     font-family: 微軟正黑體;
+    max-width: 100%;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -106,8 +107,8 @@ table {
 
 .badge_add {
     margin-left: 5px;
-    background:	#E0E0E0;
-    padding:2px 6px;
+    background: #E0E0E0;
+    padding: 2px 6px;
     width: 20px;
     border-radius: 50%;
     outline: none;
@@ -121,7 +122,7 @@ table {
 }
 
 .hidden {
-    visibility:hidden;
+    visibility: hidden;
 }
 
 .banner {
@@ -255,10 +256,11 @@ table {
 }
 
 .goodslist-section .goods-ul {
-    max-width: 1016px;
+    width: 90%;
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    padding-right: 35px;
 }
 
 .goodslist-section .goods-ul li {
@@ -472,4 +474,65 @@ table {
 .signIn-form img {
     width: 260px;
     margin-bottom: 60px;
+}
+
+@media (max-width: 1024px) {
+    .goodslist-section .goods-ul  {
+        width: 100% ;
+        padding-right: 10px;
+    }
+
+    .goodslist-section .goods-ul li {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .header .nav-bar {
+        padding: 6px;
+    }
+
+    .badge_add {
+        position: absolute;
+    }
+
+    .banner_msg {
+        width: 80%;
+    }
+
+    .swiper-container {
+        width: 80%;
+    }
+
+    .pagination a {
+        max-width: 30px;
+    }
+
+    .header .menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .menu li {
+        margin: 2px;
+    }
+
+
+    .footer {
+        flex-direction: column;
+        padding: 3%;
+    }
+
+    .footer_icon {
+        width: 90%;
+    }
+
+    .footer .footer_loge {
+        margin: 0 auto;
+    }
+
+    .footer .social_network {
+        justify-content: flex-start;
+    }
 }
