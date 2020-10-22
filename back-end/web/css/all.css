@@ -364,7 +364,7 @@ table {
 
 .member-section {
     margin: 0 auto;
-    width: 800px;
+    max-width: 800px;
     padding: 50px;
     height: 700px;
     background: url(../img/signBg.png) center/cover no-repeat;
@@ -375,8 +375,7 @@ table {
 
 .member-form {
     color: rgba(147, 102, 0, 0.8);
-    width: 300px;
-    width: 300px;
+    max-width: 300px;
     margin-top: 20px;
     padding: 20px;
     display: flex;
@@ -385,8 +384,12 @@ table {
     font-size: 18px;
 }
 
+.member-form img {
+    max-width: 100%;
+}
+
 .member-form input {
-    width: 250px;
+    max-width: 250px;
     margin: 10px 0px 30px 0px;
     align-items: center;
     border: none;
@@ -401,7 +404,7 @@ table {
 
 .member-form .submit-button {
     display: inline-block;
-    width: 120px;
+    max-width: 120px;
     height: 40px;
     margin: 10px 20px 10px 60px;
     border-radius: 7px;
@@ -421,6 +424,17 @@ table {
 }
 
 /* member-switch */
+.sign-switch {
+    max-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sign_btn {
+    margin-left: 10px;
+}
+
 .sign-switch span {
     color: rgba(143, 140, 140, 0.8);
 }
@@ -477,13 +491,33 @@ table {
 }
 
 @media (max-width: 1024px) {
-    .goodslist-section .goods-ul  {
-        width: 100% ;
+    .goodslist-section .goods-ul {
+        width: 100%;
         padding-right: 10px;
     }
 
     .goodslist-section .goods-ul li {
         margin-left: 10px;
+    }
+}
+
+@media (max-width: 780px) {
+    .member-section {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .sign-switch {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sign-switch a {
+        max-width: 100px;
+    }
+
+    .sign_btn {
+        margin-top: 10px;
     }
 }
 
@@ -534,5 +568,11 @@ table {
 
     .footer .social_network {
         justify-content: flex-start;
+    }
+}
+
+@media (max-width: 320px) {
+    .header .menu li a{
+        font-size: 16px;
     }
 }

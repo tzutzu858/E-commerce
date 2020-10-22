@@ -83,7 +83,7 @@
                 <!-- 登入 -->
                 <form id=form_signIn class="member-form signIn-form" action="controller" method="post"
                       onsubmit="return signIpverify(this)">
-                    <img src="img/moon.png">
+                    <img class="img_moon" src="img/moon.png">
                     帳號：
                     <div class="form_block_input">
                         <input type="text" name="userid" placeholder="請輸入帳號"/>
@@ -101,7 +101,10 @@
                 </form>
                 <div class="sign-switch">
                     <span class="signIn-span">已有帳號了嗎</span><span class="signUp-span">還沒有註冊嗎</span>
-                    <a href="" class="signIn-switch">sign in</a><a href="" class="sigUp-switch">sign up</a>
+                    <div class="sign_btn">
+                        <a href="" class="signIn-switch">sign in</a><a href="" class="sigUp-switch">sign up</a>
+                    </div>
+
                 </div>
             </div>
         </div>
