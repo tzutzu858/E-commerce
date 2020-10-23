@@ -21,26 +21,7 @@
 <body>
 <div class="wraper">
     <div class="header member-header">
-        <div class="nav-bar">
-            <div class="nav-logo-block">
-                <h1><a href="controller?action=list">Dream</a></h1>
-                <ul>
-                    <c:forEach var="error" items="${errors}">
-                        <li class="error">${error}</li>
-                    </c:forEach>
-                </ul>
-                <ul>
-                    <c:forEach var="ok" items="${ok}">
-                        <li class="ok">${ok}</li>
-                    </c:forEach>
-                </ul>
-            </div>
-            <ul class="menu">
-                <li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
-                <li><a href="cart.jsp"><i class="cart icon"></i>購物車</a></li>
-                <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
-            </ul>
-        </div>
+        <%@ include file="nav_bar.jsp" %>
         <div class="banner">
 
             <div class="member-section ">
@@ -83,7 +64,7 @@
                 <!-- 登入 -->
                 <form id=form_signIn class="member-form signIn-form" action="controller" method="post"
                       onsubmit="return signIpverify(this)">
-                    <img src="img/moon.png">
+                    <img class="img_moon" src="img/moon.png">
                     帳號：
                     <div class="form_block_input">
                         <input type="text" name="userid" placeholder="請輸入帳號"/>
@@ -101,30 +82,15 @@
                 </form>
                 <div class="sign-switch">
                     <span class="signIn-span">已有帳號了嗎</span><span class="signUp-span">還沒有註冊嗎</span>
-                    <a href="" class="signIn-switch">sign in</a><a href="" class="sigUp-switch">sign up</a>
+                    <div class="sign_btn">
+                        <a href="" class="signIn-switch">sign in</a><a href="" class="sigUp-switch">sign up</a>
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="footer_info">
-            <p>公司地址：台灣市台灣路台灣號123樓</p>
-            <p>客服專線：01-1314-5566</p>
-            <p>來電時間：週一〜週五 09:00~18:00 / 週六、週日、國定假日（含連假）休息</p>
-            <p>email：java02@thatsdreaming.com.tw</p>
-        </div>
-        <div class="footer_icon">
-            <a href="controller?action=list"><img class="footer_loge" src="svg/title_logo.svg"/></a>
-            <ul class="social_network">
-                <li><a href=""><img class='icon' src="svg/facebook.svg"/></a></li>
-                <li><a href=""><img class='icon' src="svg/instagram-sketched.svg"/></a></li>
-                <li><a href=""><img class='icon' src="svg/twitter.svg"/></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer_bottom">
-        happy coding © 2020 I Love Java.有限公司版權所有
-    </div>
+    <%@ include file="footer.jsp" %>
 </div>
 <script src="js/member.js" type="text/javascript" charset="utf-8"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>

@@ -23,14 +23,7 @@
 <body>
 <div class="wraper">
     <div class="header">
-        <div class="nav-bar">
-            <h1><a href="controller?action=list">Dream</a></h1>
-            <ul class="menu">
-                <li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
-                <li><a href="controller?action=cart"><i class="cart icon"></i>購物車</a></li>
-                <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
-            </ul>
-        </div>
+        <%@ include file="nav_bar.jsp" %>
         <div class="banner">
             <h2 align="left">BUY A DREAM</h2>
             <p>A dedached space for the soul to settle in the hustle and bustle of the confused city.</p>
@@ -41,49 +34,25 @@
             <h3>選擇下列商品，讓今夜在迷茫城市喧囂裡</h3>
             <h3>有個讓心靈沉澱的超然空間</h3>
             <h2>熱銷搶購中</h2>
-
-            <hr width="100%"/>
-
             <div>
                 <div class="goods_detail_block">
                     <div class="goods_title">
                         <p style="font-size: xx-large">${goods.name}</p>
-
-                        <div style="margin: 30px"><img src="img/${goods.image}" width="360px" height="360px"/></div>
-                        <div align="center">價格：<span class="title">$${goods.price}元</span></div>
+                        <div class="detail_img">
+                            <img src="img/${goods.image}"/>
+                        </div>
+                        <div class="detail_price">價格：$${goods.price}元</div>
                     </div>
                     <div class="goods_description">
                         <div class="goods_msg">${goods.description}</div>
-                        <span>
-                        <a href="controller?action=add&pagename=list&id=${goods.id}&name=${goods.name}&price=${goods.price}&img=${goods.image}&description=${goods.description}"><input
-                                type="button" value="添加到購物車"></a>
-                    </span>
+                        <a class="detail_add_btn" href="controller?action=add&pagename=list&id=${goods.id}&name=${goods.name}&price=${goods.price}&img=${goods.image}&description=${goods.description}">添加到購物車</a>
+
                     </div>
                 </div>
             </div>
-
-
-            <div class="footer">
-                <div class="footer_info">
-                    <p>公司地址：台灣市台灣路台灣號123樓</p>
-                    <p>客服專線：01-1314-5566</p>
-                    <p>來電時間：週一〜週五 09:00~18:00 / 週六、週日、國定假日（含連假）休息</p>
-                    <p>email：java02@thatsdreaming.com.tw</p>
-                </div>
-                <div class="footer_icon">
-                    <a href="goods_list.jsp"><img class="footer_loge" src="svg/title_logo.svg"/></a>
-                    <ul class="social_network">
-                        <li><a href=""><img class='icon' src="svg/facebook.svg"/></a></li>
-                        <li><a href=""><img class='icon' src="svg/instagram-sketched.svg"/></a></li>
-                        <li><a href=""><img class='icon' src="svg/twitter.svg"/></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer_bottom">
-                <p>happy coding © 2020 I Love Java.有限公司版權所有</p>
-            </div>
         </div>
     </div>
+    <%@ include file="footer.jsp" %>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/goodlist.js" type="text/javascript" charset="utf-8"></script>

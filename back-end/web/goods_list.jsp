@@ -24,32 +24,7 @@
 <body>
 <div class="wraper">
     <div class="header">
-        <div class="nav-bar">
-            <div class="nav-logo-block">
-                <h1><a href="controller?action=list">Dream</a></h1>
-                <c:if test="${not empty customerName}">
-                    <div class="username-block">Hello，${customerName}</div>
-                </c:if>
-            </div>
-
-            <ul class="menu">
-                <li><a href="controller?action=list"><i class="list icon"></i>商品列表</a></li>
-
-                <li class="shopping_cart">
-                    <a href="controller?action=cart">
-                        <i class="cart icon"></i>購物車
-                        <input id="cart_num" type="text" class="badge_add" readonly="readonly" value="${num}">
-                    </a>
-                </li>
-
-                <c:if test="${empty customerName}">
-                    <li><a href="member.jsp"><i class="id card icon"></i>會員專區</a></li>
-                </c:if>
-                <c:if test="${not empty customerName}">
-                    <li><a href="controller?action=logout"><i class="id card icon"></i>登出</a></li>
-                </c:if>
-            </ul>
-        </div>
+        <%@ include file="nav_bar.jsp" %>
         <div class="banner">
             <h2>BUY A DREAM</h2>
             <p class="banner_msg">A dedached space for the soul to settle in the hustle and bustle of the confused
@@ -114,25 +89,7 @@
             </ul>
         </div>
     </div>
-    <div class="footer">
-        <div class="footer_info">
-            <p>公司地址：台灣市台灣路台灣號123樓</p>
-            <p>客服專線：01-1314-5566</p>
-            <p>來電時間：週一〜週五 09:00~18:00 / 週六、週日、國定假日（含連假）休息</p>
-            <p>email：java02@thatsdreaming.com.tw</p>
-        </div>
-        <div class="footer_icon">
-            <a href="controller?action=list"><img class="footer_loge" src="svg/title_logo.svg"/></a>
-            <ul class="social_network">
-                <li><a href=""><img class='icon' src="svg/facebook.svg"/></a></li>
-                <li><a href=""><img class='icon' src="svg/instagram-sketched.svg"/></a></li>
-                <li><a href=""><img class='icon' src="svg/twitter.svg"/></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer_bottom">
-        <p>happy coding © 2020 I Love Java.有限公司版權所有</p>
-    </div>
+    <%@ include file="footer.jsp" %>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/goodlist.js" type="text/javascript" charset="utf-8"></script>
