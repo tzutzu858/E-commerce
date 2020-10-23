@@ -2,9 +2,8 @@
 
 
 body {
-    background: url(../img/bg.jpg) center/cover no-repeat !important;
+    background: url(../img/bg.jpg) center/cover !important;
 }
-
 
 nav {
     box-shadow: -1.6px -1.6px 6px 0px #000000;
@@ -18,7 +17,6 @@ li {
 }
 
 
-
 input {
     outline: none;
     border: none;
@@ -29,35 +27,11 @@ button {
     border: none;
 }
 
-button:focus{
+button:focus {
     outline: none;
 }
 
-.navbar .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-}
-
-.nav-bar {
-    width: 100%;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #C0BFBF;
-    box-shadow: 2px 2px 10px #C0BFBF;
-    margin: 0;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.nav-bar h1 {
-    display: inline-block;
-    margin: 0;
-}
-
-.nav-bar h1 a {
+.nav-logo-block {
     background: url(../svg/title_logo.svg) no-repeat;
     display: inline-block;
     width: 173px;
@@ -67,24 +41,8 @@ button:focus{
     overflow: hidden;
 }
 
-.menu {
-    margin-top: 20px;
-    display: flex;
-    width: 400px;
-    justify-content: space-around;
-}
-
-.menu li a {
-    display: inline-block;
-    color: #a19f9f;
-    text-align: center;
-    width: 110px;
-    margin: 0 10px;
-    font-size: 20px;
-}
-
-.menu li a:hover {
-    color: #696868;
+.container {
+    margin-bottom: 123px;
 }
 
 .site-name {
@@ -147,7 +105,9 @@ button:focus{
 }
 
 .order_goods_img {
-    background: center/contain no-repeat;
+    background: center no-repeat;
+    background-size: cover;
+
     width: 30%;
     height: 90px;
     margin-right: 10px;
@@ -175,7 +135,7 @@ button:focus{
 }
 
 .amount_btn:active {
-    background:#ff9633;
+    background: #ff9633;
 }
 
 .order_price_total {
@@ -184,11 +144,14 @@ button:focus{
 
 .del_btn {
     margin: 0;
-    padding: 0;
+    padding: 8px !important;
     border: 1px solid transparent;
     outline: none;
-    background: none;
-
+    background:cadetblue;
+    color:white;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
 .footer_block {
@@ -239,4 +202,71 @@ button:focus{
     font-weight: bold;
     border-style: none;
     margin-left: 50px;
+}
+
+.web_display_none {
+    display: none !important;
+}
+
+@media (max-width: 771px) {
+    .app_display_none {
+        display: none !important;
+    }
+
+    .web_display_none {
+        display: flex !important;
+        margin-right: 10px;
+    }
+
+    .app_goodsname {
+        margin: 10px;
+        font-size: 20px;
+    }
+
+    .col-5 {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .order_goods_img {
+        background: center no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 170px;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+    .order_list {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .del_btn {
+        width: 100px;
+    }
+
+    .footer_block {
+        height: 80px;
+    }
+
+    .total_price {
+        font-size: 24px;
+    }
+
+    .settle_accounts_block {
+        padding: 5px;
+    }
+
+    .settle_accounts_btn {
+        margin-left:10px;
+        width:60px;
+        height: 40px;
+        font-size: 18px;
+    }
 }

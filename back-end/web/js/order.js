@@ -4,7 +4,7 @@ document.querySelector('.container').addEventListener('click', (e) => {
 
     /*  -----------------刪除商品項目-----------------------*/
     if (target.classList.contains('del_btn')) {
-        const totalDel = target.parentNode.parentNode.children[3].children[0].innerText
+        const totalDel = target.parentNode.parentNode.children[4].children[1].innerText
         document.getElementById('total').innerText = parseInt(total) - parseInt(totalDel);
         target.parentNode.parentNode.remove();
         console.log(target.parentNode.parentNode)
@@ -26,25 +26,26 @@ document.querySelector('.container').addEventListener('click', (e) => {
     /*  -----------------改變商品數量-----------------------*/
     if (target.classList.contains('add_btn')) {
         var count = target.parentNode.children[1].value;
-        var price = target.parentNode.parentNode.parentNode.children[1].innerText;
+
+        var price = target.parentNode.parentNode.parentNode.children[2].children[1].innerText;
         target.parentNode.children[1].value = ++count;
         var subtotle1 = target.parentNode.children[1].value
-        target.parentNode.parentNode.parentNode.children[3].children[0].innerText = subtotle1 * price;
+        target.parentNode.parentNode.parentNode.children[4].children[1].innerText = subtotle1 * price;
         total = parseInt(total) + parseInt(price);
         document.getElementById('total').innerText = total;
     }
 
     if (target.classList.contains('minus_btn')) {
         var count = target.parentNode.children[1].value;
-        var price = target.parentNode.parentNode.parentNode.children[1].innerText;
-
+        var price = target.parentNode.parentNode.parentNode.children[2].children[1].innerText;
         if (count > 0) {
             target.parentNode.children[1].value = --count;
             var subtotle1 = target.parentNode.children[1].value;
-            target.parentNode.parentNode.parentNode.children[3].children[0].innerText = subtotle1 * price;
+            target.parentNode.parentNode.parentNode.children[4].children[1].innerText = subtotle1 * price;
+            console.log(target.parentNode.parentNode.parentNode.children[4])
+            console.log('小計'+ (target.parentNode.parentNode.parentNode.children[4].children[1].innerText = subtotle1 * price))
             total = parseInt(total) - parseInt(price);
             document.getElementById('total').innerText = total;
-
         }
     }
 });

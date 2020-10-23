@@ -62,7 +62,7 @@ table {
     background: url(../img/navbar_bg.png) center/cover no-repeat;
 }
 
-.header .nav-bar {
+.nav-bar {
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -85,14 +85,14 @@ table {
     overflow: hidden;
 }
 
-.header .menu {
+.menu {
     margin-top: 20px;
     display: flex;
     max-width: 500px;
     justify-content: space-around;
 }
 
-.header .menu li a {
+.menu li a {
     display: inline-block;
     color: #a19f9f;
     text-align: center;
@@ -101,7 +101,7 @@ table {
     font-size: 20px;
 }
 
-.header .menu li a:hover {
+.menu li a:hover {
     color: #696868;
 }
 
@@ -359,7 +359,6 @@ table {
 /* member--community */
 .member-header {
     background: url(../img/navbar_bg.png) center/cover no-repeat;
-    height: 1000px;
 }
 
 .member-section {
@@ -375,7 +374,7 @@ table {
 
 .member-form {
     color: rgba(147, 102, 0, 0.8);
-    max-width: 300px;
+    max-width: 350px;
     margin-top: 20px;
     padding: 20px;
     display: flex;
@@ -499,9 +498,27 @@ table {
     .goodslist-section .goods-ul li {
         margin-left: 10px;
     }
+
+    .form_block_input {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .member-form input {
+        margin: 10px 0px 0px 0px;
+    }
+
+    .input-err {
+        margin-left: 0 !important;
+        margin-top: 5px !important;
+        margin-bottom: 10px !important;
+    }
 }
 
 @media (max-width: 780px) {
+    .nav-logo-block {
+        width: 150px;
+    }
     .member-section {
         flex-direction: column;
         padding: 5px;
@@ -523,6 +540,11 @@ table {
 
 @media (max-width: 767px) {
 
+    .nav-logo-block {
+        display: flex;
+        flex-direction: column;
+    }
+
     .header .nav-bar {
         padding: 6px;
     }
@@ -543,7 +565,7 @@ table {
         max-width: 30px;
     }
 
-    .header .menu {
+    .menu {
         flex-direction: column;
         margin-top: 10px;
     }
@@ -572,7 +594,11 @@ table {
 }
 
 @media (max-width: 320px) {
-    .header .menu li a{
-        font-size: 16px;
+    .menu li a{
+        font-size: 14px !important;
+    }
+
+    .pagination a {
+        max-width: 20px;
     }
 }
