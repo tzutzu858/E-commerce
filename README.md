@@ -1,6 +1,4 @@
 # E-commerce
-測試(舊) : http://master.tzutzu858.tw<br>
-測試(新) : http://develop.tzutzu858.tw<br>
 
 ## 架構簡略圖<br>
 ![](https://i.imgur.com/FfItxNs.jpg)<br>
